@@ -1,0 +1,121 @@
+.hero{
+    position: relative;
+    
+    background: linear-gradient(0deg, rgba($textDarkBlue, .9), rgba($textDarkBlue, .9)), url("/images/image/hero-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: $white;
+    font-weight: 700;
+    text-align: center;
+
+
+    
+    .abs{
+        position: absolute;
+        z-index: 1;
+
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint-up(medium){
+            top: 30px;
+        }
+
+        @include breakpoint-up(large){
+            top: 42px;
+        }
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    &__title{
+        margin: 0;
+        padding-top: 1rem;
+        font-size: 1.875rem;
+
+        span{
+            color: $textRed;
+        }
+
+        @include breakpoint-up(large){
+            font-size: 2.8125rem;
+        }
+    }
+
+    &__subtitle{
+        margin: 0;
+        padding-top: 0.875rem;
+        font-size: 1.5rem;
+
+        @include breakpoint-up(large){
+            font-size: 2rem;
+        }
+    }
+
+    &__text{
+        display: inline-block;
+        margin: 0;
+        margin-top: 0.875rem;
+        line-height: 1.2;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        span{
+            text-transform: uppercase;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: $textRed;
+        }
+
+        @include breakpoint-up(large){
+            font-size: 2rem;
+            width: 1024px;
+
+            span{
+                font-size: 2.1875rem;
+            }
+        }
+    }
+
+    &__cta{
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(large){
+            flex-direction: row;
+            margin-top: 3.75rem;
+        }
+    }
+
+    &__more{
+        color: $textRed;
+        margin: 0;
+        margin-top: 1.5rem;
+        
+
+        @include breakpoint-up(large){
+            margin: 0;
+            margin-right: 2.5rem;
+            padding-bottom: 0rem;
+            transition: all 200ms ease-in-out;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+
+    &__btn{
+        margin: 0;
+        margin-top: 1.5rem;
+
+
+        @include breakpoint-up(large){
+            margin: 0;
+        }
+    }
+
+}

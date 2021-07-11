@@ -1,0 +1,19 @@
+{
+  "name": "english-ilg",
+  "version": "1.0.0",
+  "description": "web english education",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "scss": "node-sass -w ./app/scss -o ./public/css"
+  },
+  "author": "loc-giau",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

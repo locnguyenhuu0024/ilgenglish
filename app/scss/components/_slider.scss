@@ -1,0 +1,65 @@
+.carousel-container{
+    max-width: 1024px;
+    max-height: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    position: relative;
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 344px;
+        background-color: hsla(217, 0, 75, .8);
+        z-index: 1;
+
+        @include breakpoint-up(large){
+            height: 450px;
+        }
+    }
+
+    .carousel-slide{
+        display: flex;
+        width: 100%;
+        height: 344px;
+        position: relative;
+
+        img{
+            min-width: 100%;
+        }
+
+        @include breakpoint-up(large){
+            height: 450px;
+            width: 1024px;
+        }
+    }
+
+    &:hover{
+        #prevBtn, #nextBtn{
+            opacity: .9;
+        }
+    }
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}
+
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out;
+}

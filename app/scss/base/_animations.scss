@@ -1,0 +1,88 @@
+.has-fade{
+    visibility: hidden;
+}
+
+.has-fade-modal{
+    visibility: hidden;
+}
+@keyframes fade-in{
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation: fade-out 200ms ease-in-out forwards;
+}
+
+@keyframes hover-in{
+    0%{
+        transform: scale(1, 1);
+    }
+
+    50%{
+        transform: scale(1.025, 1.025);
+    }
+    100%{
+        transform: scale(1.05, 1.05);
+    }
+}
+
+.hover-in{
+    @include breakpoint-up(large){
+        &:hover{
+            transform: scale(1.05, 1.05);
+            h3{
+                color: $textRedNeon;
+            }
+        }
+    }
+}
+
+@keyframes hover-in-toright{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.hover-in-toright{
+    animation: hover-in-toright 600ms ease-in-out forwards;
+}
+
+@keyframes hover-out-toleft{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.hover-out-toleft{
+    animation: hover-out-toleft 600ms ease-in-out forwards;
+}

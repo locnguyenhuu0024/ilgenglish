@@ -1,0 +1,62 @@
+.btn{
+    position: relative;
+    width: fit-content;
+    border-radius: 4px;
+    color: $white;
+    font-size: 1rem;
+    font-weight: 700;
+    z-index: 1;
+
+    span{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+
+        transform: translateX(-50%);
+        transition: all 200ms ease-in-out;
+
+        width: 0px;
+        height: 2px;
+        background-color: $white;
+
+        z-index: 2;
+    }
+
+    
+    &--red{
+        background-color: $darkRed;
+        
+        padding: 1.125rem 1.25rem;
+
+        @include breakpoint-up(large){
+            
+            &::before{
+                content: "";
+                width: 97.5%;
+                height: 95%;
+        
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+                border-radius: 4px;
+                background-color: rgba($color: $red, $alpha: .6);
+                z-index: -1;
+            }
+
+            
+            &:hover{
+                span{
+                    width: 75%;
+                }
+                &::before{
+                    background-color: rgba($color: $red, $alpha: .2);
+                }
+            }
+        }
+    }
+}
+
+.btn-white{
+    background-color: white;
+}

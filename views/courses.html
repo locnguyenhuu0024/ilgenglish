@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ | iLG English</title>
+    <link rel="icon" type="image/png" sizes="35x35" href="/images/image/logo.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header ">
+        <nav class="container flex flex--jc-sb flex--ai-c center">
+            <a href="/" class="header__logo">
+                <img src="/images/image/logo.svg" alt="logo">
+            </a>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="header__links hide-for-mobile">
+                <a href="/">Trang chủ</a>
+                <a href="/introduce">Giới thiệu</a>
+                <a href="/courses" class="main">Khoá học</a>
+                <a href="/calendars">Lịch học</a>
+                <a href="/news">Tin tức</a>
+            </div>
+
+            <a href="#" class="btn btn--red hide-for-mobile">
+                Đăng ký ngay
+                <span></span>
+            </a>
+        </nav>
+
+        <div class="overlay has-fade"></div>
+
+        <div class="header__menu hide-for-desktop flex has-fade">
+            <a href="/">Trang chủ</a>
+            <a href="/introduce">Giới thiệu</a>
+            <a href="/courses" class="main">Khoá học</a>
+            <a href="#">Lịch học</a>
+            <a href="#">Tin tức</a>
+            <a href="#" class="btn btn--red">Đăng ký ngay</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="carousel-container">
+            <i class="fas fa-arrow-left" id="prevBtn"></i>
+            <i class="fas fa-arrow-right" id="nextBtn"></i>
+            <div class="carousel-slide">
+                <img src="/images/image/banner-khoahoc4.jpg" id="lastClone" alt="">
+                <img src="/images/image/banner-khoahoc1.jpg" alt="">
+                <img src="/images/image/banner-khoahoc2.jpg" alt="">
+                <img src="/images/image/banner-khoahoc3.jpg" alt="">
+                <img src="/images/image/banner-khoahoc4.jpg" alt="">
+                <img src="/images/image/banner-khoahoc1.jpg" id="firstClone" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="course">
+        <h2 class="course__title container">Tiếng anh dành cho mọi lứa tuổi</h2>
+
+        <div class="grid">
+            <div class="course__box hover-in" href="#">
+                <img class="course__image" src="/images/image/eng-for-student.jpg" alt="kid">
+                <h3 class="course__subtitle">Tiếng anh trẻ em</h3>
+                <a href="#" class="course__contents">
+                    <p class="course__texts">
+                        <span>KID</span><br>
+                        Dành cho các bé từ 4 > 8 tuổi <br>
+                        <span>Junior KID</span><br>
+                        Dành cho các bé từ 8 > 14 tuổi <br>
+                        <span>High KID</span><br>
+                        Dành cho các bé từ 14 > 18 tuổi <br>
+                    </p>
+                </a>
+            </div>
+
+            <div class="course__box hover-in" href="#">
+                <img class="course__image" src="/images/image/eng-for-junior.jpg" alt="kid">
+                <h3 class="course__subtitle">Tiếng anh người lớn</h3>
+                <a href="#" class="course__contents">
+                    <p class="course__texts">
+                        <span>English for Adults</span><br>
+                        Tất cả các khoá học đều dựa trên tiêu chuẩn quốc tế về trình độ tiếng Anh.
+                    </p>
+                </a>
+            </div>
+
+            <div class="course__box hover-in" href="#">
+                <img class="course__image" src="/images/image/eng-for-certificate.jpg" alt="kid">
+                <h3 class="course__subtitle">chứng chỉ quốc tế</h3>
+                <a href="#" class="course__contents">
+                    <p class="course__texts">
+                        <span>Global Certificates</span><br>
+                        Tất cả các khoá học đều dựa trên tiêu chuẩn quốc tế về trình độ tiếng Anh.
+                    </p>
+                </a>
+            </div>
+
+            <div class="course__box hover-in" href="#">
+                <img class="course__image" src="/images/image/eng-for-business.jpg" alt="business">
+                <h3 class="course__subtitle">English for Business</h3>
+                <a href="#" class="course__contents">
+                    <p class="course__texts">
+                        <span>English for Business</span><br>
+                        Chúng tôi cung cấp chương trình đào tạo từ các khóa học tiếng Anh cơ bản tới các khóa học tiếng
+                        Anh chuyên sâu theo ngành nghề và theo từng kỹ năng.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-kid">
+        <div class=" container flex flex--jc-sa">
+            <img class="course-kid__image" src="/images/image/coursekid.png" alt="hinh">
+            <div class="course-kid__right">
+                <p class="course-kid__text">
+                    iLG tự hào giới thiệu trung tâm tiếng Anh đẳng cấp quốc tế lần đầu tiên xuất hiện tại Việt Nam
+                    dành cho học viên từ 4-15 tuổi.
+                </p>
+                <p class="course-kid__text">
+                    Đây là chương trình đươc xây dựng bằng tất cả tâm huyết của các chuyên gia giáo dục
+                    đẳng cấp quốc tế, đội ngũ quản lý học vụ giàu lòng yêu trẻ nhằm mang đến một trải nghiệm tuyệt vời,
+                    phát triển toàn diện: giáo dục kiến thức, giáo dục thể chất và giáo dục nhân cách.
+                </p>
+                <p class="course-kid__text">
+                    Chương trình được thiết kế đặc nhằm tập trung phát triển toàn diện tiếng Anh song song
+                    với 6 kỹ năng vàng: giao tiếp, hợp tác, sáng tạo, tư duy phản biện, kiến thức công nghệ
+                    và tự hoàn thiện bản thân nhưng vẫn tràn ngập niềm vui tuổi thơ với bạn bè đồng trang lứa.
+                </p>
+                <p class="course-kid__text">
+                    Hãy nhanh tay đăng ký để ươm mầm tương cho con bạn
+                </p>
+                <a href="#" class="btn btn--red">
+                    Đăng ký ngay
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stories">
+        <h2 class="stories__title">Chuyện mỗi ngày của iLG</h2>
+        <div class="stories__list">
+            <img src="/images/image/cauchuyenilg-1.png" alt="video">
+            <img src="/images/image/cauchuyenilg-2.png" alt="video">
+            <img src="/images/image/cauchuyenilg-3.png" alt="video">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="flex">
+            <div class="footer__cta">
+                <h1 class="footer__title">
+                    anh ngữ <span>iLG</span>
+                </h1>
+                <a href="#" class="btn btn--red">
+                    Đăng ký ngay
+                    <span></span>
+                </a>
+            </div>
+            
+            <div class=" flex flex-menu">
+                <div class="footer__menu-1">
+                    <a href="#">Giới thiệu</a>
+                    <a href="#">Khoá học</a>
+                    <a href="#">Tin tức</a>
+                </div>
+    
+                <div class="footer__menu-2">
+                    <h3>CONTACT US</h3>
+                    <a class="contact" href="#">Website: <span>ilg.edu.vn</span></a>
+                    <a class="contact" href="#">Phone: <span>00-000-0000</span></a>
+
+                    <div class="footer__icons hide-for-mobile">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>    
+
+                
+            </div>
+            
+            <div class="footer__icons hide-for-desktop">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal has-fade-modal">
+        <div class="modal__header">
+            <i class="fas fa-window-close btnClose"></i>
+        </div>
+        <div class="modal__contents flex flex--ai-c">
+            <h2 class="modal__title">Lorem</h2>
+            <img class="modal__image" src="/images/image/gioithieu2.png" alt="img">
+            <p class="modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit aspernatur distinctio laborum atque quis mollitia, magni quos voluptatibus error sint perspiciatis molestiae sit animi dignissimos optio corrupti, vel labore nemo.</p>
+        </div>
+        <!-- <div class="modal__footer">
+            <button class="btnClose">Đóng</button>
+        </div> -->
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery.js"></script>
+</body>
+
+</html>
