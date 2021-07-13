@@ -1,12 +1,23 @@
 .numpage{
     position: absolute;
-    bottom: 10px;
-    left: 50%;
+    bottom: 5px;
+    left: 45%;
     transform: translateX(-50%);
 
     width: 100px;
     height: fit-content;
-    &__num{
 
+    @include breakpoint-up(medium){
+        left: 49%;
+        transform: translateX(-56%);
+    }
+    &__num{
+        color: $white;
+        font-size: 16px;
+        padding: 8px;
+
+        &:hover{
+            color: $textRed;
+        }
     }
 }

@@ -16,18 +16,18 @@
 </head>
 
 <body>
-    <header class="header ">
+    <header class="header">
         <nav class="container flex flex--jc-sb flex--ai-c center">
             <a href="/" class="header__logo">
                 <img src="/images/image/logo.svg" alt="logo">
             </a>
-
+        
             <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-
+        
             <div class="header__links hide-for-mobile">
                 <a href="/" class="main">Trang chủ</a>
                 <a href="/introduce">Giới thiệu</a>
@@ -35,15 +35,15 @@
                 <a href="/calendars">Lịch học</a>
                 <a href="/news">Tin tức</a>
             </div>
-
+        
             <a href="#" class="btn btn--red hide-for-mobile">
                 Đăng ký ngay
                 <span></span>
             </a>
         </nav>
-
+        
         <div class="overlay has-fade"></div>
-
+        
         <div class="header__menu hide-for-desktop flex has-fade">
             <a href="/" class="main">Trang chủ</a>
             <a href="/introduce">Giới thiệu</a>
@@ -150,7 +150,7 @@
         <h2 class="news__title">tin tức</h2>
 
         <div class="grid">
-            <div class="news__box box hover-in flex flex--ai-c">
+            <a class="news__box hover-in flex flex--ai-c" href="/detail-news">
                 <img class="news__image" src="/images/image/tintuc_1.jpg" alt="tin tuc 1">
                 <div class="news__contents">
                     <!-- <div class="news__calendar">
@@ -163,9 +163,9 @@
                         thành xuất sắc khoá học Global English ở iLG.</p>
                 </div>
                 <i class="fas fa-fingerprint course__more"></i>
-            </div>
+            </a>
 
-            <div class="news__box box hover-in flex flex--ai-c">
+            <a class="news__box hover-in flex flex--ai-c" href="/detail-news">
                 <img class="news__image" src="/images/image/tintuc_2.jpg" alt="tin tuc 1">
                 <div class="news__contents">
                     <!-- <div class="news__calendar">
@@ -178,9 +178,9 @@
                         iLG.</p>
                 </div>
                 <i class="fas fa-fingerprint course__more"></i>
-            </div>
+            </a>
 
-            <div class="news__box box hover-in flex flex--ai-c">
+            <a class="news__box hover-in flex flex--ai-c" href="/detail-news">
                 <img class="news__image" src="/images/image/tintuc_3.jpg" alt="tin tuc 1">
                 <div class="news__contents">
                     <!-- <div class="news__calendar">
@@ -193,9 +193,9 @@
                         chứng chỉ do Đại học Cambrige cấp. </p>
                 </div>
                 <i class="fas fa-fingerprint course__more"></i>
-            </div>
+            </a>
 
-            <div class="news__box box hover-in flex flex--ai-c">
+            <a class="news__box hover-in flex flex--ai-c" href="/detail-news">
                 <img class="news__image" src="/images/image/tintuc_4.jpg" alt="tin tuc 1">
                 <div class="news__contents">
                     <!-- <div class="news__calendar">
@@ -209,7 +209,7 @@
                         dịch cúm nCov, ILA thông báo điều chỉnh lịch học tại...</p>
                 </div>
                 <i class="fas fa-fingerprint course__more"></i>
-            </div>
+            </a>
         </div>
 
     </section>
@@ -318,8 +318,9 @@
         </div> -->
     </div>
 
-    <script src="/js/script.js"></script>
     <script src="/js/jquery.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

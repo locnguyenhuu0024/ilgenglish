@@ -11,6 +11,18 @@
     }
 }
 
+.hide-for-tablet{
+    @include breakpoint-up(medium){
+        display: none !important;
+    }
+}
+
+.hide-for-mobile-up{
+    @include breakpoint-up(medium){
+        display: none !important;
+    }
+}
+
 .hide-for-mobile{
     @include breakpoint-down(medium){
         display: none !important;

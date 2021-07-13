@@ -28,3 +28,7 @@ app.get('/news', (req, res) => {
 app.get('/detail-news', (req, res) => {
     res.sendFile(path.join(__dirname+'/views/detail-news.html'))
 })
+
+app.get('/calendars', (req, res) => {
+    res.sendFile(path.join(__dirname+'/views/calendarcourse.html'))
+})

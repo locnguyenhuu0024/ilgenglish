@@ -5,6 +5,7 @@
     //background-image: url("/images/image/background-news-mobile.png");
     background-size: 100%;
     padding: 1rem 0;
+    padding-bottom: 40px;
     position: relative;
 
     
@@ -34,7 +35,7 @@
     &__box{
         position: relative;
         width: 10.625rem;
-        height: 15.8125rem;
+        height: fit-content;
         background-color: $white;
         border-radius: 4px;
 
@@ -58,13 +59,11 @@
 
         @include breakpoint-up(medium){
             width: 20rem;
-            height: 10rem;
             flex-direction: row;
         }
 
         @include breakpoint-up(large){
             width: 30.625rem;
-            height: 13.125rem;
             flex-direction: row;
             margin-top: 1.75rem;
         }

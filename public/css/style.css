@@ -44,6 +44,14 @@ h1, h2, h3 {
   .hide-for-desktop {
     display: none !important; } }
 
+@media (min-width: 40em) {
+  .hide-for-tablet {
+    display: none !important; } }
+
+@media (min-width: 40em) {
+  .hide-for-mobile-up {
+    display: none !important; } }
+
 @media (max-width: 64.0625em) {
   .hide-for-mobile {
     display: none !important; } }
@@ -129,6 +137,9 @@ h1, h2, h3 {
     height: 2px;
     background-color: #FFFFFF;
     z-index: 2; }
+  .btn--long {
+    width: 60%;
+    text-align: center; }
   .btn--red {
     background-color: #750000;
     padding: 1.125rem 1.25rem; }
@@ -686,6 +697,7 @@ h1, h2, h3 {
   background-color: #222034;
   background-size: 100%;
   padding: 1rem 0;
+  padding-bottom: 40px;
   position: relative; }
   .news .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -700,7 +712,7 @@ h1, h2, h3 {
   .news__box {
     position: relative;
     width: 10.625rem;
-    height: 15.8125rem;
+    height: fit-content;
     background-color: #FFFFFF;
     border-radius: 4px;
     cursor: pointer;
@@ -720,12 +732,10 @@ h1, h2, h3 {
     @media (min-width: 40em) {
       .news__box {
         width: 20rem;
-        height: 10rem;
         flex-direction: row; } }
     @media (min-width: 64.0626em) {
       .news__box {
         width: 30.625rem;
-        height: 13.125rem;
         flex-direction: row;
         margin-top: 1.75rem; } }
   .news__image {
@@ -1195,11 +1205,21 @@ h1, h2, h3 {
 
 .numpage {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: 5px;
+  left: 45%;
   transform: translateX(-50%);
   width: 100px;
   height: fit-content; }
+  @media (min-width: 40em) {
+    .numpage {
+      left: 49%;
+      transform: translateX(-56%); } }
+  .numpage__num {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 8px; }
+    .numpage__num:hover {
+      color: #E20000; }
 
 .detail-news {
   background-color: #222034;
@@ -1208,6 +1228,26 @@ h1, h2, h3 {
   .detail-news .flex {
     align-items: center;
     flex-direction: column; }
+  .detail-news__subtitle {
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    width: 90%; }
+    .detail-news__subtitle a {
+      color: #FFFFFF;
+      transition: all 200ms ease-in-out;
+      margin-right: 5px;
+      font-size: 14px; }
+      .detail-news__subtitle a i {
+        margin-right: 5px; }
+      .detail-news__subtitle a:hover {
+        color: #E20000; }
+    .detail-news__subtitle p {
+      margin: 0;
+      font-size: 14px; }
+    @media (min-width: 40em) {
+      .detail-news__subtitle {
+        width: 65%; } }
   .detail-news__title {
     font-size: 20px;
     padding: 20px; }
@@ -1254,23 +1294,138 @@ h1, h2, h3 {
   background-color: #222034;
   border-top: 1px #B7B5B5 solid;
   padding: 10px; }
-  .next-news .flex {
-    width: fit-content;
+  .next-news .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     margin: auto; }
+    @media (min-width: 40em) {
+      .next-news .grid {
+        grid-template-columns: repeat(4, 1fr); } }
   .next-news .news__box {
     flex-direction: column;
-    height: 225px;
-    width: 150px; }
-    .next-news .news__box:not(:last-child) {
-      margin-right: 15px; }
+    height: 100%;
+    width: 100%;
+    margin: 0; }
     .next-news .news__box img {
       width: 100%;
       height: 40%; }
     @media (min-width: 64.0626em) {
       .next-news .news__box {
-        flex-direction: column;
-        height: 350px;
-        width: 250px; } }
+        width: 250px;
+        height: 100%; } }
   .next-news__title {
     color: #FFFFFF;
-    text-align: center; }
+    text-align: center;
+    padding: 15px 0; }
+
+.calendars {
+  background-color: #222034;
+  padding: 20px 10px; }
+  .calendars__titles {
+    text-align: center;
+    color: #FFFFFF; }
+  .calendars__title {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .calendars__subtitle {
+    font-size: 14px;
+    margin-top: 10px; }
+  .calendars select {
+    width: 80%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+    outline: none; }
+    .calendars select:not(:last-child) {
+      margin-bottom: 15px; }
+      @media (min-width: 40em) {
+        .calendars select:not(:last-child) {
+          margin-bottom: 0px;
+          margin-top: 0px;
+          margin-right: 5px; } }
+  .calendars__areas {
+    font-size: 14px;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    @media (min-width: 40em) {
+      .calendars__areas {
+        width: 70%;
+        flex-direction: row;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px; } }
+  .calendars__filters {
+    width: 90%;
+    margin: auto;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 15px 10px;
+    border-radius: 5px; }
+    .calendars__filters select {
+      border: 1px #B7B5B5 solid; }
+      @media (min-width: 40em) {
+        .calendars__filters select {
+          width: 300px; } }
+    @media (min-width: 40em) {
+      .calendars__filters {
+        width: 70%;
+        flex-direction: row; } }
+  .calendars__courses {
+    margin-top: 30px; }
+    .calendars__courses .header-table {
+      grid-template-columns: repeat(7, 1fr);
+      width: 95%;
+      padding: 15px 20px;
+      background-color: #B7B5B5;
+      border-radius: 5px;
+      margin: auto;
+      margin-top: 10px; }
+      .calendars__courses .header-table h4 {
+        margin: 0px; }
+      @media (min-width: 64.0626em) {
+        .calendars__courses .header-table {
+          width: 65%; } }
+      @media (max-width: 720px) {
+        .calendars__courses .header-table {
+          display: none !important; } }
+  .calendars__course {
+    width: 95%;
+    padding: 15px 20px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: auto; }
+    @media (max-width: 720px) {
+      .calendars__course:not(:last-child) {
+        margin-bottom: 10px; } }
+    @media (min-width: 40em) {
+      .calendars__course {
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); } }
+    @media (min-width: 64.0626em) {
+      .calendars__course {
+        width: 65%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); } }
+    .calendars__course * {
+      margin: 0; }
+    .calendars__course .grid {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%; }
+      .calendars__course .grid:not(:last-child) {
+        margin-bottom: 10px; }
+      @media (min-width: 40em) {
+        .calendars__course .grid {
+          grid-template-columns: 90% 10%; } }
+    .calendars__course .classID {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase; }
+    .calendars__course .btn {
+      width: fit-content;
+      height: fit-content;
+      padding: 5px 10px;
+      font-size: 12px; }

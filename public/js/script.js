@@ -1,3 +1,4 @@
+
 const btnHamburger = document.querySelector('#btnHamburger');
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
@@ -8,9 +9,21 @@ const box = document.querySelectorAll('.box');
 const modal = document.querySelector('.modal');
 const btnOffModal = document.querySelector('.btnClose')
 
-
 const courseBox = document.querySelectorAll(".course__box");
 const btnShowCourseBox = document.querySelectorAll(".course__contents--btn");
+const city = document.getElementById("calendars__city");
+
+async function getProvince(url){
+    const listProvince = await fetch(url);
+    return listProvince.json();
+}
+
+getProvince('https://vapi.vnappmob.com/api/province').then(
+    data => data.results.map(val => {
+        let province = `<option id=${val.province_id} value="${val.province_name}">${val.province_name}</option>`;
+        $(city).append(province)
+    })
+);
 
 btnHamburger.addEventListener('click', function(){
     //console.log('open cc');
