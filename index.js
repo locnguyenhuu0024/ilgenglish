@@ -32,3 +32,7 @@ app.get('/detail-news', (req, res) => {
 app.get('/calendars', (req, res) => {
     res.sendFile(path.join(__dirname+'/views/calendarcourse.html'))
 })
+
+app.get('/detail-course', (req, res) => {
+    res.sendFile(path.join(__dirname+'/views/detail-course.html'))
+})

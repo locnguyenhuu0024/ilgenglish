@@ -1429,3 +1429,53 @@ h1, h2, h3 {
       height: fit-content;
       padding: 5px 10px;
       font-size: 12px; }
+
+.detailcourse {
+  background-color: #222034;
+  padding: 20px;
+  color: #FFFFFF; }
+  .detailcourse__header {
+    flex-direction: column;
+    max-width: 1024px;
+    margin: auto; }
+    @media (min-width: 40em) {
+      .detailcourse__header {
+        flex-direction: row; } }
+  .detailcourse__img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 12px; }
+    @media (min-width: 40em) {
+      .detailcourse__img {
+        width: 50%;
+        height: 375px;
+        flex-grow: 8;
+        margin-bottom: 20px; } }
+  .detailcourse__detail {
+    flex-direction: row;
+    align-items: center; }
+    @media (min-width: 40em) {
+      .detailcourse__detail {
+        height: fit-content;
+        flex-direction: column;
+        flex-grow: 4;
+        align-items: flex-end;
+        text-align: end; } }
+    .detailcourse__detail--text * {
+      margin: 0px; }
+    .detailcourse__detail--text h1 {
+      font-size: 18px;
+      margin-bottom: 10px; }
+      @media (min-width: 40em) {
+        .detailcourse__detail--text h1 {
+          font-size: 22px; } }
+    .detailcourse__detail--text p {
+      margin-bottom: 10px; }
+      @media (min-width: 40em) {
+        .detailcourse__detail--text p {
+          font-size: 18px; } }
+  .detailcourse__content {
+    max-width: 1024px;
+    text-align: justify;
+    font-size: 14px;
+    margin: auto; }
