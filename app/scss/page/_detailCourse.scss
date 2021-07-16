@@ -1,0 +1,73 @@
+.detailcourse{
+    background-color: $textDarkBlue;
+    padding: 20px;
+    color: $white;
+
+    &__header{
+        flex-direction: column;
+        max-width: 1024px;
+        margin: auto;
+
+        @include breakpoint-up(medium){
+            flex-direction: row;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 12px;
+
+        @include breakpoint-up(medium){
+            width: 50%;
+            height: 375px;
+            flex-grow: 8;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__detail{
+        flex-direction: row;
+        align-items: center;
+
+        @include breakpoint-up(medium){
+            height: fit-content;
+            flex-direction: column;
+            flex-grow: 4;
+            align-items: flex-end;
+            text-align: end;
+        }
+        &--text{
+            *{
+                margin: 0px;
+            }
+
+            h1{
+                font-size: 18px;
+                margin-bottom: 10px;
+                
+                @include breakpoint-up(medium){
+                    font-size: 22px;
+                }
+            }
+
+            p{
+                
+                margin-bottom: 10px;
+                @include breakpoint-up(medium){
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+
+    &__content{
+        
+        max-width: 1024px;
+        text-align: justify;
+        font-size: 14px;
+
+        margin: auto;
+    }
+}
