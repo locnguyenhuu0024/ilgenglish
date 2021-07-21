@@ -1,0 +1,107 @@
+.listcourses{
+    background-color: $textDarkBlue;
+    color: $white;
+    padding: 20px 0;
+
+    &__title{
+        max-width: 1024px;
+        
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+
+        margin: auto;
+        margin-bottom: 16px;
+
+        @include breakpoint-up(large){
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle{
+        max-width: 1024px;
+        text-align: start;
+        
+        font-size: 20px;
+        font-weight: 500;
+
+        margin: auto;
+        margin-bottom: 14px;
+        padding: 0 15px;
+    }
+
+    &__list{
+        margin: auto;
+        grid-template-columns: 50% 50%;
+        grid-gap: 5px;
+    }
+
+    &__item{
+        width: 171px;
+        height: 237px;
+        background-color: $white;
+        color: $textVeryDarkBlue;
+        border-radius: 5px;
+
+        flex-direction: column;
+        transition: all 200ms ease-in-out;
+
+        @include breakpoint-up(medium){
+            flex-direction: row;
+            width: 350px;
+            height: 120px;
+        }
+
+        @include breakpoint-up(large){
+            
+            flex-direction: row;
+            width: 452px;
+            height: 180px;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 108px;
+        flex-grow: 20;
+        border-radius: 5px;
+
+        @include breakpoint-up(medium){
+            height: 100%;
+        }
+
+        @include breakpoint-up(large){
+            width: 260px;
+            height: 100%;
+        }
+    }
+
+    &__contents{
+        flex-direction: column;
+        justify-content: space-around;
+        flex-grow: 75;
+        padding: 5px;
+        p{
+            width: 100%;
+            text-align: start;
+            margin: 0px;
+            font-size: 14px;
+        }
+        @include breakpoint-up(large){
+        }
+    }
+
+    &__id{
+        font-weight: 700;
+        font-size: 16px !important;
+    }
+
+    .more{
+        text-align: end;
+        font-size: 12px;
+
+        &:hover{
+            color: $textRed;
+        }
+    }
+}
