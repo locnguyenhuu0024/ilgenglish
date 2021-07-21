@@ -15,7 +15,8 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 400;
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #222034; }
 
 a {
   text-decoration: none;
@@ -219,7 +220,7 @@ h1, h2, h3 {
   left: 50%;
   width: 300px;
   min-height: max-content;
-  background-color: #1A185A;
+  background-color: #B7B5B5;
   transform: translate(-50%, -20%);
   border-radius: 10px;
   padding: 0px 20px;
@@ -1172,6 +1173,16 @@ h1, h2, h3 {
     color: #E20000;
     z-index: 0;
     padding: 5px; }
+  .course .btn {
+    margin: auto; }
+
+.course__cta {
+  width: fit-content;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 10px; }
+  .course__cta .btn {
+    background-color: #B7B5B5; }
 
 .stories {
   background-color: #222034; }
@@ -1479,3 +1490,78 @@ h1, h2, h3 {
     text-align: justify;
     font-size: 14px;
     margin: auto; }
+
+.listcourses {
+  background-color: #222034;
+  color: #FFFFFF;
+  padding: 20px 0; }
+  .listcourses__title {
+    max-width: 1024px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: auto;
+    margin-bottom: 16px; }
+    @media (min-width: 64.0626em) {
+      .listcourses__title {
+        font-size: 20px; } }
+  .listcourses__subtitle {
+    max-width: 1024px;
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    margin: auto;
+    margin-bottom: 14px;
+    padding: 0 15px; }
+  .listcourses__list {
+    margin: auto;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px; }
+  .listcourses__item {
+    width: 171px;
+    height: 237px;
+    background-color: #FFFFFF;
+    color: #141033;
+    border-radius: 5px;
+    flex-direction: column;
+    transition: all 200ms ease-in-out; }
+    @media (min-width: 40em) {
+      .listcourses__item {
+        flex-direction: row;
+        width: 350px;
+        height: 120px; } }
+    @media (min-width: 64.0626em) {
+      .listcourses__item {
+        flex-direction: row;
+        width: 452px;
+        height: 180px; } }
+  .listcourses__image {
+    width: 100%;
+    height: 108px;
+    flex-grow: 20;
+    border-radius: 5px; }
+    @media (min-width: 40em) {
+      .listcourses__image {
+        height: 100%; } }
+    @media (min-width: 64.0626em) {
+      .listcourses__image {
+        width: 260px;
+        height: 100%; } }
+  .listcourses__contents {
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 75;
+    padding: 5px; }
+    .listcourses__contents p {
+      width: 100%;
+      text-align: start;
+      margin: 0px;
+      font-size: 14px; }
+  .listcourses__id {
+    font-weight: 700;
+    font-size: 16px !important; }
+  .listcourses .more {
+    text-align: end;
+    font-size: 12px; }
+    .listcourses .more:hover {
+      color: #E20000; }

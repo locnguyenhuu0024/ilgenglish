@@ -2,7 +2,6 @@
     background-color: $textDarkBlue;
     padding: 20px;
     color: $white;
-
     &__header{
         flex-direction: column;
         max-width: 1024px;
@@ -22,7 +21,7 @@
             width: 50%;
             height: 375px;
             flex-grow: 8;
-            margin-bottom: 20px;
+            margin-bottom: 20px ;
         }
     }
 
