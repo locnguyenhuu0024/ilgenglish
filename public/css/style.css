@@ -1669,7 +1669,21 @@ h1, h2, h3 {
     font-size: 20px;
     font-weight: 700; }
   .review__comments {
-    border-bottom: 2px #FFFFFF solid; }
+    border-bottom: 2px #FFFFFF solid;
+    max-height: 300px;
+    overflow-y: scroll;
+    /* Handle */
+    /* Handle on hover */ }
+    .review__comments::-webkit-scrollbar {
+      width: 6px; }
+    .review__comments::-webkit-scrollbar-track {
+      background: rgba(100, 100, 100, 0.1);
+      border-radius: 10px; }
+    .review__comments::-webkit-scrollbar-thumb {
+      background: #B7B5B5;
+      border-radius: 10px; }
+    .review__comments::-webkit-scrollbar-thumb:hover {
+      background: rgba(100, 100, 100, 0.8); }
   .review__comment {
     margin-bottom: 15px; }
     .review__comment h4, .review__comment p {
@@ -1706,7 +1720,8 @@ h1, h2, h3 {
   .listcourses__list {
     margin: auto;
     grid-template-columns: 50% 50%;
-    grid-gap: 5px; }
+    grid-gap: 5px;
+    margin-bottom: 20px; }
   .listcourses__item {
     width: 171px;
     height: 237px;

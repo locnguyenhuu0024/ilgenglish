@@ -112,6 +112,28 @@
 
     &__comments{
         border-bottom: 2px $white solid;
+        max-height: 300px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba($color: #646464, $alpha: .1); 
+            border-radius: 10px;
+        }
+           
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $blurGrey; 
+            border-radius: 10px;
+        }
+          
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba($color: #646464, $alpha: .8); 
+        }
     }
 
     &__comment{

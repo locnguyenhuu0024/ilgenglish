@@ -12,6 +12,5 @@ btnSendComment.addEventListener('click', () => {
             </div>`
         );
         inpCmt.val('');
-        inpCmtName.val('');
     }
 });
