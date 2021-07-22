@@ -131,13 +131,6 @@ btnSend.addEventListener('click', () => {
         chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
 
         input.val('');
-
-        setTimeout(() => {
-            $('.float-chat__logs').append(
-                `<div class="ilg flex"><p>Đùa đấy =))</p></div>`
-            );
-            chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
-        }, 3000);
     }
         
 });
