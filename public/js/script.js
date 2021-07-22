@@ -125,12 +125,10 @@ btnShow.addEventListener('click', (e) => {
 let input = $('#input-text');
 btnSend.addEventListener('click', () => {
     if(input.val()){
-        setTimeout(() => {
-            $('.float-chat__logs').append(
-                `<div class="self flex"><p>${input.val()}</p></div>`
-            );
-            chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
-        }, 3000);
+        $('.float-chat__logs').append(
+            `<div class="self flex"><p>${input.val()}</p></div>`
+        );
+        chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
 
         input.val('');
 
@@ -142,23 +140,4 @@ btnSend.addEventListener('click', () => {
         }, 3000);
     }
         
-});
-
-// Review comment
-const btnSendComment = document.querySelector('#btnsendcomment');
-const logsCmt = $('.review__comments');
-const inpCmtName = $('#input-name');
-const inpCmt = $('#input-comment');
-
-btnSendComment.addEventListener('click', () => {
-    if(inpCmt.val() && inpCmtName.val()){
-        logsCmt.append(
-            `<div class="review__comment">
-                <h4>${inpCmtName.val()}</h4>
-                <p>${inpCmt.val()}</p>
-            </div>`
-        );
-        inpCmt.val('');
-        inpCmtName.val('');
-    }
 });
