@@ -128,13 +128,13 @@ h1, h2, h3 {
   100% {
     transform: translateX(-100%);
     width: 300px;
-    height: 450px; } }
+    height: 300px; } }
 
 @keyframes floathide {
   0% {
     transform: translateX(-100%);
     width: 300px;
-    height: 450px; }
+    height: 300px; }
   100% {
     transform: translateX(250%);
     width: 0px;
@@ -341,7 +341,7 @@ h1, h2, h3 {
   flex-direction: row;
   align-items: flex-end;
   z-index: 3; }
-  @media (min-width: 40em) {
+  @media (min-width: 64.0626em) {
     .float-chat {
       bottom: 100px; } }
   .float-chat__box {
