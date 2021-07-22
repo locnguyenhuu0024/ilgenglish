@@ -1,0 +1,147 @@
+.float-chat{
+    position: fixed;
+    right: 5px;
+    bottom: 25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    z-index: 3;
+
+    @include breakpoint-up(medium){
+        bottom: 100px;
+    }
+
+    &__box{
+        position: absolute;
+        transform: translateX(250%);
+        width: 0px;
+        height: 0px;
+        // width: 300px;
+        // height: 450px;
+        background-color: $blurGrey;
+        border-radius: 5px;
+        padding: 10px;
+        margin-right: 10px;
+
+        flex-direction: column;
+        transition: all 200ms ease-in-out;
+
+        
+    }
+
+    &__logs{
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        border-radius: 5px;
+        padding: 5px;
+
+        margin: auto;
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba($color: #646464, $alpha: .1); 
+            border-radius: 10px;
+        }
+           
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $blurGrey; 
+            border-radius: 10px;
+        }
+          
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba($color: #646464, $alpha: .8); 
+        }
+
+        p{
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 10px;
+            color: $white;
+
+            margin: 0px;
+            margin-bottom: 6px;
+        }
+
+        .ilg{
+            p{
+                background-color: $blurGrey;
+                max-width: 180px;
+                margin-right: auto;
+            }
+        }
+
+        .self{
+            p{
+                max-width: 180px;
+                margin-left: auto;
+                background-color: $textRedNeon;
+            }
+        }
+    }
+
+    &__cta{
+        flex-direction: row;
+        padding-top: 10px;
+    }
+
+    &__inputtext{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+
+        margin-right: 5px;
+    }
+
+    &__btnsend{
+        padding: 10px;
+        background-color: $textRedNeon;
+        color: $white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        &:active{
+            font-weight: 700;
+        }
+
+        @include breakpoint-up(medium){
+            &:hover{
+                background-color: $white;
+                color: $textRedNeon;
+            }
+        }
+    }
+
+    &__btnshow{
+        padding: 15px;
+        border-radius: 50%;
+        background-color: $textRedNeon;
+        color: $white;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        z-index: 5;
+        
+        &:active{
+            background-color: $white;
+            color: $textRedNeon;
+        }
+
+        @include breakpoint-up(large){
+            &:hover{
+                background-color: cadetblue;
+            }
+        }
+    }
+}

@@ -54,6 +54,22 @@
         </div>
     </header>
 
+    <section class="float-chat">
+        <div class="float-chat__box flex flex--jc-sa">
+            <div class="float-chat__logs">
+                <div class="ilg flex"><p>Chào mừng anh/chị đã đến với trung tâm ngoại ngữ iLG</p></div>
+                <div class="ilg flex"><p>Nếu anh chị có thắc mắc, cứ vức hết vào đây em trả lời tất.</p></div>
+            </div>
+            <div class="float-chat__cta flex flex--jc-sb">
+                <input id="input-text" class="float-chat__inputtext" type="text" placeholder="Nhập tin nhắn">
+                <div id="btnsend" class="float-chat__btnsend">Gửi</div>
+            </div>
+        </div>
+        <div id="btnshow" class="float-chat__btnshow">
+            <i class="fas fa-comments"></i>
+        </div>
+    </section>
+
     <section class="detailcourse">
         <div class="detail-news__subtitle">
             <a href="/courses"><i class="far fa-newspaper"></i>Chi tiết khóa học/</a>
@@ -68,10 +84,18 @@
                     <p>Số người: 20</p>
                     <p>Số buổi: 15 buổi</p>
                 </div>
-                <a href="#" class="btn btn--red">
-                    Đăng ký
-                    <span></span>
-                </a>
+                <div class="detailcourse__cta flex flex--jc-sb">
+                    <a href="#" class="btn btn--red">
+                        Đăng ký
+                        <span></span>
+                    </a>
+                    <a href="#" class="share btn btn--grey">
+                        Chia sẻ
+                        <span></span>
+                        
+                        <i class="fas fa-share"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -85,11 +109,34 @@
             </p>
     </section>
 
+    <section class="review">
+        <h3>Đánh giá</h3>
+        <div class="review__comments">
+            <div class="review__comment">
+                <h4>Huấn Hoa Hồng</h4>
+                <p>Ra xã hội làm ăn bương chãi. Liều thì ăn nhiều, không liều thì ăn ít</p>
+            </div>
+            <div class="review__comment">
+                <h4>Khá Bảnh</h4>
+                <p>Ôi bạn ơi, viên Kim Cương này giá hai nghìn.</p>
+            </div>
+            <div class="review__comment">
+                <h4>Tiến Bịp</h4>
+                <p>Còn cái nịt =))</p>
+            </div>
+        </div>
+        <div class="float-chat__cta flex flex--jc-sb">
+            <input id="input-name" class="float-chat__inputtext" type="text" placeholder="Nhập tên...">
+            <input id="input-comment" class="float-chat__inputtext" type="text" placeholder="Nhập đánh giá...">
+            <div id="btnsendcomment" class="float-chat__btnsend">Gửi</div>
+        </div>
+    </section>
+
     <section class="course">
         <h2 class="course__title container">Khóa học khác</h2>
 
         <div class="grid">
-            <a class="course__box hover-in" href="/detailcourse">
+            <a class="course__box hover-in" href="/listcourse">
                 <img class="course__image" src="/images/image/eng-for-student.jpg" alt="kid">
                 <h3 class="course__subtitle">Tiếng anh trẻ em</h3>
                 <div class="course__contents">
@@ -104,7 +151,7 @@
                 </div>
             </a>
 
-            <a class="course__box hover-in" href="/detailcourse">
+            <a class="course__box hover-in" href="/listcourse">
                 <img class="course__image" src="/images/image/eng-for-junior.jpg" alt="kid">
                 <h3 class="course__subtitle">Tiếng anh người lớn</h3>
                 <div class="course__contents">
@@ -115,7 +162,7 @@
                 </div>
             </a>
 
-            <a class="course__box hover-in" href="/detailcourse">
+            <a class="course__box hover-in" href="/listcourse">
                 <img class="course__image" src="/images/image/eng-for-certificate.jpg" alt="kid">
                 <h3 class="course__subtitle">chứng chỉ quốc tế</h3>
                 <div class="course__contents">
@@ -126,7 +173,7 @@
                 </div>
             </a>
 
-            <a class="course__box hover-in" href="/detailcourse">
+            <a class="course__box hover-in" href="/listcourse">
                 <img class="course__image" src="/images/image/eng-for-business.jpg" alt="business">
                 <h3 class="course__subtitle">English for Business</h3>
                 <div class="course__contents">
@@ -203,7 +250,6 @@
     </div>
 
     <script src="/js/jquery.js"></script>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="/js/script.js"></script>
 </body>
 

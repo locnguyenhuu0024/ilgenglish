@@ -107,51 +107,58 @@ courseBox.forEach((eleBox) => {
     });
 });
 
+// Float chat button & chat-logs
+const btnShow = document.getElementById('btnshow');
+const chatbox = document.querySelector('.float-chat__box');
+const btnSend = document.getElementById('btnsend');
+const chatlog = document.querySelector('.float-chat__logs');
 
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.carousel-slide img');
-
-//button
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
-
-// counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-
-//button listener
-nextBtn.addEventListener('click', () => {
-    if(counter >= carouselImages.length - 1) return;
-    carouselSlide.style.transition = 'transform 600ms ease-in-out';
-    counter++;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-});
-
-prevBtn.addEventListener('click', () => {
-    if(counter <= 0) return;
-    carouselSlide.style.transition = 'transform 600ms ease-in-out';
-    counter--;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-});
-
-setInterval(function(){ 
-    carouselSlide.style.transition = 'transform 650ms ease-in-out';
-    counter++;
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-}, 5000);
-
-carouselSlide.addEventListener('transitionend', () => {
-    if(carouselImages[counter].id === 'lastClone'){
-        carouselSlide.style.transform = `none`;
-        counter = carouselImages.length - 2;
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+btnShow.addEventListener('click', (e) => {
+    if(chatbox.classList.contains('floatshow')){
+        chatbox.classList.add('floathide');
+        chatbox.classList.remove('floatshow');
+    }else{
+        chatbox.classList.add('floatshow');
+        chatbox.classList.remove('floathide');
     }
+});
+let input = $('#input-text');
+btnSend.addEventListener('click', () => {
+    if(input.val()){
+        setTimeout(() => {
+            $('.float-chat__logs').append(
+                `<div class="self flex"><p>${input.val()}</p></div>`
+            );
+            chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
+        }, 3000);
 
-    if(carouselImages[counter].id === 'firstClone'){
-        carouselSlide.style.transform = `none`;
-        counter = carouselImages.length - counter;
-        carouselSlide.style.transform = `translateX(${-size * counter}px)`;
+        input.val('');
+
+        setTimeout(() => {
+            $('.float-chat__logs').append(
+                `<div class="ilg flex"><p>Đùa đấy =))</p></div>`
+            );
+            chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
+        }, 3000);
+    }
+        
+});
+
+// Review comment
+const btnSendComment = document.querySelector('#btnsendcomment');
+const logsCmt = $('.review__comments');
+const inpCmtName = $('#input-name');
+const inpCmt = $('#input-comment');
+
+btnSendComment.addEventListener('click', () => {
+    if(inpCmt.val() && inpCmtName.val()){
+        logsCmt.append(
+            `<div class="review__comment">
+                <h4>${inpCmtName.val()}</h4>
+                <p>${inpCmt.val()}</p>
+            </div>`
+        );
+        inpCmt.val('');
+        inpCmtName.val('');
     }
 });

@@ -25,9 +25,24 @@
         }
     }
 
+    &__cta{
+        flex-direction: column;
+        align-items: flex-end;
+        .share{
+            font-size: 12px;
+            padding: 8px 10px;
+            margin-top: 8px;
+            transition: all 200ms ease-in-out;
+            &:hover{
+                background-color: cadetblue;
+            }
+        }
+    }
+
     &__detail{
         flex-direction: row;
         align-items: center;
+        margin-bottom: 10px;
 
         @include breakpoint-up(medium){
             height: fit-content;
@@ -37,13 +52,21 @@
             text-align: end;
         }
         &--text{
+            height: 89px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include breakpoint-up(medium){
+                margin-bottom: 10px;
+            }
+
             *{
                 margin: 0px;
             }
 
             h1{
                 font-size: 18px;
-                margin-bottom: 10px;
                 
                 @include breakpoint-up(medium){
                     font-size: 22px;
@@ -51,8 +74,6 @@
             }
 
             p{
-                
-                margin-bottom: 10px;
                 @include breakpoint-up(medium){
                     font-size: 18px;
                 }
@@ -68,5 +89,46 @@
         font-size: 14px;
 
         margin: auto;
+    }
+}
+
+.review{
+    background-color: rgba($color: #091A2A, $alpha: .35);
+    color: $white;
+    width: 95%;
+    max-width: 1024px;
+
+    margin: auto;
+    padding: 10px;
+
+    border: 2px $white solid;
+    border-radius: 5px;
+
+    h3{ 
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__comments{
+        border-bottom: 2px $white solid;
+    }
+
+    &__comment{
+        h4, p{
+            margin: 0px;
+        }
+
+        h4{
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        p{
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        margin-bottom: 15px;
     }
 }

@@ -60,6 +60,39 @@
             }
         }
     }
+
+    &--grey{
+        background-color: $blurGrey;
+        
+        padding: 1.125rem 1.25rem;
+
+        @include breakpoint-up(large){
+            
+            &::before{
+                content: "";
+                width: 97.5%;
+                height: 95%;
+        
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+                border-radius: 4px;
+                background-color: rgba($color: $blurGrey, $alpha: .6);
+                z-index: -1;
+            }
+
+            
+            &:hover{
+                span{
+                    width: 75%;
+                }
+                &::before{
+                    background-color: rgba($color: $blurGrey, $alpha: .2);
+                }
+            }
+        }
+    }
 }
 
 .btn-white{
