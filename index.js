@@ -7,7 +7,6 @@ app.set('view engine', 'html');
 app.set('views', './views')
 
 app.listen(process.env.PORT || 3000, () => console.log("Server connected!"));
-console.log();
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/views/index.html'))
@@ -39,4 +38,8 @@ app.get('/listcourse', (req, res) => {
 
 app.get('/detailcourse', (req, res) => {
     res.sendFile(path.join(__dirname+'/views/detailcourse.html'))
+})
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname+'/views/register.html'))
 })

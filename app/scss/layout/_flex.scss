@@ -17,4 +17,12 @@
     &--jc-fs{
         justify-content: flex-start;
     }
+
+    &--fd-c{
+        flex-direction: column;
+    }
+
+    &--fd-r{
+        flex-direction: row;
+    }
 }
