@@ -133,6 +133,13 @@ btnSend.addEventListener('click', () => {
         chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
 
         input.val('');
+
+        setTimeout(() => {
+            $('.float-chat__logs').append(
+                `<div class="ilg flex"><p>Cảm ơn bạn. Chúng tôi sẽ trả lời tin nhắn của bạn sớm nhất có thể.</p></div>`
+            );
+            chatlog.scrollTop = chatlog.scrollHeight - chatlog.clientHeight;
+        }, 500);
     }
 });
 

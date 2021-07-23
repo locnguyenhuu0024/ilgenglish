@@ -8,7 +8,8 @@ const statusNotify = {
     passColor: 'background-color: rgba(72, 219, 104, 1); color: white;',
     passContent: 'Bạn đã đăng ký thành công. Trung tâm sẽ liên hệ với bạn sớm nhất để hoàn thành hồ sơ nhận lớp.',
     failColor: 'background-color: rgba(255, 82, 82, 1); color: white;',
-    failContent: 'Vui lòng nhập đầy đủ thông tin.', 
+    failContent: 'Vui lòng nhập đầy đủ thông tin.',
+    failInputColor:  'background-color: rgba(255, 82, 82, .3);',
 };
 btnRegister.addEventListener('click', (e) => {
     let tam = 0;
@@ -16,7 +17,7 @@ btnRegister.addEventListener('click', (e) => {
         inputRegisters.forEach((inputRegister) => {
             if(!inputRegister.value && inputRegister.hasAttribute('required')){
                 tam = tam + 1;
-                inputRegister.setAttribute('style', statusNotify.failColor);
+                inputRegister.setAttribute('style', statusNotify.failInputColor);
             }else{
                 inputRegister.setAttribute('style', 'background-color: $white;');
                 inputRegister.setAttribute('readonly', 'true');

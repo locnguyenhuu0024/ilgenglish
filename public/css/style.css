@@ -1845,6 +1845,10 @@ h1, h2, h3 {
       font-family: 'Josefin Sans', sans-serif;
       font-size: 14px;
       margin-bottom: 15px; }
+      @media (min-width: 40em) {
+        .register__form input {
+          font-size: 16px;
+          padding: 10px; } }
   .register .grid {
     width: 100%;
     grid-template-columns: 40% 60%; }
