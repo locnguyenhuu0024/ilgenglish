@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch học | iLG English</title>
+    <link rel="icon" type="image/png" sizes="35x35" href="/images/image/logo.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container flex flex--jc-sb flex--ai-c center">
+            <a href="/" class="header__logo">
+                <img src="/images/image/logo.svg" alt="logo">
+            </a>
+        
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        
+            <div class="header__links hide-for-mobile">
+                <a href="/">Trang chủ</a>
+                <a href="/introduce">Giới thiệu</a>
+                <a href="/courses">Khoá học</a>
+                <a href="/calendars" class="main">Lịch học</a>
+                <a href="/news">Tin tức</a>
+            </div>
+        
+            <a href="/listcourse" class="btn btn--red hide-for-mobile">
+                Đăng ký ngay
+                <span></span>
+            </a>
+        </nav>
+        
+        <div class="overlay has-fade"></div>
+        
+        <div class="header__menu hide-for-desktop flex has-fade">
+            <a href="/">Trang chủ</a>
+            <a href="/introduce">Giới thiệu</a>
+            <a href="/courses">Khoá học</a>
+            <a href="/calendars" class="main">Lịch học</a>
+            <a href="/news">Tin tức</a>
+            <a href="/listcourse" class="btn btn--red">Đăng ký ngay</a>
+        </div>
+    </header>
+
+    <section class="float-chat">
+        <div class="float-chat__box flex flex--jc-sa">
+            <div class="float-chat__logs">
+                <div class="ilg flex"><p>Chào mừng anh/chị đã đến với trung tâm ngoại ngữ iLG</p></div>
+                <div class="ilg flex"><p>Nếu anh chị có thắc mắc, cứ vức hết vào đây em trả lời tất.</p></div>
+            </div>
+            <div class="float-chat__cta flex flex--jc-sb">
+                <input id="input-text" class="float-chat__inputtext" type="text" placeholder="Nhập tin nhắn">
+                <div id="btnsend" class="float-chat__btnsend">Gửi</div>
+            </div>
+        </div>
+        <div id="btnshow" class="float-chat__btnshow">
+            <i class="fas fa-comments"></i>
+        </div>
+    </section>
+    
+    <section class="register">
+        <div class="register__image" >
+            <img src="/images/image/eng-for-student.jpg" alt="img">
+        </div>
+        <div class="register__form flex flex--jc-sb">
+            <div class="grid">
+                <div class="flex flex--jc-sb flex--fd-c">
+                    <label for="classID">Mã lớp học</label>
+                    <input id="classID" type="text" value="AHSJDWJKF123" readonly>
+                </div>
+                <div class="flex flex--jc-sb flex--fd-c">
+                    <label for="className">Tên khóa học</label>
+                    <input id="className" type="text" value="Tiếng anh cho trẻ em" readonly>
+                </div>
+            </div>
+            <label for="stuName">Tên học viên *</label>
+            <input id="stuName" type="text" placeholder="Nhập tên học viên..." required>
+            <label for="parName">Tên phụ huynh</label>
+            <input id="parName" type="text" placeholder="Nhập tên phụ huynh (nếu có)...">
+            <label for="phone">Số điện thoại *</label>
+            <input id="phone" type="text" placeholder="Nhập SĐT..." required>
+            <label for="email">Email *</label>
+            <input id="email" type="text" placeholder="Nhập email..." required>
+            <label for="coupoun">Mã giảm giá</label>
+            <input id="coupoun" type="text" placeholder="Nhập mã...">
+            <label for="total">Tổng tiền</label>
+            <input id="total" type="text" value="600000" readonly>
+            <div id="btnRegister" class="btn btn--red">
+                Đăng ký
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="notify flex flex--jc-sb flex--fd-r flex--ai-c">
+        <p id="notifyContent" class="notify__content"></p>
+        <i id="btnCloseNotify" class="fas fa-times"></i>
+    </section>
+
+    <footer class="footer">
+        <div class="flex">
+            <div class="footer__cta">
+                <h1 class="footer__title">
+                    anh ngữ <span>iLG</span>
+                </h1>
+                <a href="/listcourse" class="btn btn--red">
+                    Đăng ký ngay
+                    <span></span>
+                </a>
+            </div>
+
+            <div class=" flex flex-menu">
+                <div class="footer__menu-1">
+                    <a href="/introduce">Giới thiệu</a>
+                    <a href="/courses">Khoá học</a>
+                    <a href="/news">Tin tức</a>
+                </div>
+
+                <div class="footer__menu-2">
+                    <h3>CONTACT US</h3>
+                    <a class="contact" href="ilgenglish.herokuapp.com">Website: <span>ilg.edu.vn</span></a>
+                    <div class="contact">Phone: <span>00-000-0000</span></div>
+
+                    <div class="footer__icons hide-for-mobile">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="footer__icons hide-for-desktop">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/notify.js"></script>
+</body>
+
+</html>
