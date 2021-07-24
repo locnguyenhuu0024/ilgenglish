@@ -100,7 +100,6 @@ function checkNull(){
 btnRegister.addEventListener('click', async (e) => {
     if(!checkNull()){
         sendFailNotify(statusNotify.failContent);
-        setColor(inputName);
     }else{
         if(checkName() === false){
             sendFailNotify(statusNotify.failName);
