@@ -43,3 +43,7 @@ app.get('/detailcourse', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname+'/views/register.html'))
 })
+
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname+'/views/contact.html'))
+})

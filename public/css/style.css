@@ -1837,13 +1837,19 @@ h1, h2, h3 {
     padding: 15px;
     text-align: center;
     margin: 0px; }
+  .register__subtitle {
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    margin: 0px; }
   .register__form {
     flex-direction: column;
     width: 95%;
     max-width: 990px;
     margin: auto;
     margin-bottom: 16px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 10px 20px;
+    border-radius: 5px;
     background-color: #141033; }
     .register__form p {
       margin: 0px;
@@ -1853,7 +1859,7 @@ h1, h2, h3 {
       color: #FFFFFF;
       font-size: 14px;
       margin-bottom: 10px; }
-    .register__form input {
+    .register__form input, .register__form textarea {
       padding: 7px;
       outline: none;
       border: none;
@@ -1863,13 +1869,29 @@ h1, h2, h3 {
       font-size: 14px;
       margin-bottom: 15px; }
       @media (min-width: 40em) {
-        .register__form input {
+        .register__form input, .register__form textarea {
           font-size: 16px;
           padding: 10px; } }
+    .register__form textarea {
+      resize: none;
+      border-radius: 5px;
+      /* Handle */
+      /* Handle on hover */ }
+      .register__form textarea::-webkit-scrollbar {
+        width: 6px; }
+      .register__form textarea::-webkit-scrollbar-track {
+        background: rgba(100, 100, 100, 0.1);
+        border-radius: 10px; }
+      .register__form textarea::-webkit-scrollbar-thumb {
+        background: #B7B5B5;
+        border-radius: 10px; }
+      .register__form textarea::-webkit-scrollbar-thumb:hover {
+        background: rgba(100, 100, 100, 0.8); }
   .register .grid {
     width: 100%;
     grid-template-columns: 40% 60%; }
     .register .grid input {
       width: 98%; }
   .register .btn {
-    margin: auto; }
+    margin: auto;
+    margin-bottom: 20px; }
