@@ -3,7 +3,6 @@ const textarea = document.querySelector('textarea');
 const inputs = document.querySelectorAll('input');
 const notify = document.querySelector('.notify');
 const notifyContent = document.getElementById('notifyContent');
-const btnCloseNotify = document.getElementById('btnCloseNotify');
 
 const statusNotify = {
     passColor: 'background-color: rgba(72, 219, 104, 1); color: white;',
@@ -12,12 +11,6 @@ const statusNotify = {
     failContent: 'Vui lòng nhập đầy đủ thông tin.',
     failInputColor:  'background-color: rgba(255, 82, 82, .3);',
 };
-
-function setTimeOut(element, time){
-    setTimeout(() => {
-        element
-    }, time);
-}
 
 function checkNull(){
     let tam = 0;
@@ -33,19 +26,19 @@ function checkNull(){
                 input.setAttribute('readonly', 'true');
             }, 500);
         }
-    });
     
-    if(!textarea.value){
-        tam += 1
-        setTimeout(() => {
-            textarea.setAttribute('style', statusNotify.failInputColor);
-        }, 500);
-    }else{
-        setTimeout(() => {
-            textarea.setAttribute('style', 'background-color: $white;');
-            textarea.setAttribute('readonly', 'true');
-        }, 500);
-    }
+        if(!textarea.value){
+            tam += 1
+            setTimeout(() => {
+                textarea.setAttribute('style', statusNotify.failInputColor);
+            }, 500);
+        }else{
+            setTimeout(() => {
+                textarea.setAttribute('style', 'background-color: $white;');
+                textarea.setAttribute('readonly', 'true');
+            }, 500);
+        }
+    });
 
     if(tam != 1) return false;
     return true;
@@ -73,10 +66,5 @@ btnSendContact.addEventListener('click', () => {
     setTimeout(() => {
         notify.classList.add('notify-float-hide');
         notify.classList.remove('notify-float-show');
-    }, 5600);
-});
-
-btnCloseNotify.addEventListener('click', (e) => {
-    notify.classList.add('notify-float-hide');
-    notify.classList.remove('notify-float-show');
+    }, 3600);
 });
