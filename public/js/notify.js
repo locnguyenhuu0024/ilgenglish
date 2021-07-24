@@ -103,6 +103,7 @@ btnRegister.addEventListener('click', async (e) => {
     }else{
         if(checkName() === false){
             sendFailNotify(statusNotify.failName);
+            setColor(inputName);
             if(checkPhone() === false){
                 setColor(inputPhone);
             }
