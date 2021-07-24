@@ -11,8 +11,10 @@ const statusNotify = {
     failContent: 'Vui lòng nhập đầy đủ thông tin.',
     failInputColor:  'background-color: rgba(255, 82, 82, .3);',
 };
+
 btnRegister.addEventListener('click', (e) => {
     let tam = 0;
+    
     function checkNull(){
         inputRegisters.forEach((inputRegister) => {
             if(!inputRegister.value && inputRegister.hasAttribute('required')){
@@ -27,6 +29,7 @@ btnRegister.addEventListener('click', (e) => {
                 inputRegister.removeAttribute('readonly');
             }
         });
+
         if(tam == 0){
             setTimeout(() => {
                 notify.classList.remove('notify-float-hide');
@@ -42,10 +45,16 @@ btnRegister.addEventListener('click', (e) => {
                 notifyContent.innerHTML = statusNotify.failContent;
             }, 1000);
         }
+
+        setTimeout(() => {
+            notify.classList.add('notify-float-hide');
+            notify.classList.remove('notify-float-show');
+        }, 5600);
     }   
     
     checkNull();
 });    
+
 btnCloseNotify.addEventListener('click', (e) => {
     notify.classList.add('notify-float-hide');
     notify.classList.remove('notify-float-show');
