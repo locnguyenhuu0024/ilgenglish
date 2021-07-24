@@ -1,5 +1,4 @@
 // Abstracts
-@import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
@@ -10,7 +9,6 @@
 
 // Components
 @import "components/buttons";
-@import "components/carousel";
 @import "components/slider";
 @import "components/modal";
 @import "components/chatbox";
@@ -19,10 +17,7 @@
 // Layout
 @import "layout/header";
 @import "layout/footer";
-@import "layout/forms";
 @import "layout/grid";
-@import "layout/navigation";
-@import "layout/sidebar";
 @import "layout/flex";
 @import "layout/hero";
 @import "layout/introduce";
