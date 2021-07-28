@@ -1,0 +1,15 @@
+.coupoun{
+    &__content{
+        text-align: center;
+        color: $white;
+        font-size: 20px;
+
+        span{
+            color: $textRed;
+        }
+
+        @include breakpoint-up(large){
+            font-size: 25px;
+        }
+    }
+}

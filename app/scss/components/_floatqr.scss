@@ -1,0 +1,14 @@
+.float-qr{
+    position: fixed;
+    width: fit-content;
+
+    left: 15px;
+    top: 300px;
+
+    z-index: 20;
+
+    img{
+        width: 140px;
+
+    }
+}
