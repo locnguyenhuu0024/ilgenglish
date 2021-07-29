@@ -34,9 +34,31 @@
         color: $white;
         padding: 15px;
         text-align: center;
-        margin: 0px;
+        margin: auto;
+        max-width: 1024px;
+
     }
     
+    .grid-form{
+        margin: auto;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .grid-left{
+
+            img{
+                width: 70%;
+                margin-top: 60px;
+                margin-left: 80px;
+            }
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: 40% 60%;
+        }
+    }
+
     &__form{
         flex-direction: column;
         width: 95%;
