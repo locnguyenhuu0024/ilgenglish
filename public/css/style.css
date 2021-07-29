@@ -1870,13 +1870,22 @@ h1, h2, h3 {
     max-width: 1024px; }
   .register .grid-form {
     margin: auto;
+    margin-top: 10px;
     max-width: 1000px;
     display: grid;
     grid-template-columns: 1fr; }
-    .register .grid-form .grid-left img {
-      width: 70%;
-      margin-top: 60px;
-      margin-left: 80px; }
+    .register .grid-form .grid-left {
+      position: relative; }
+      .register .grid-form .grid-left p {
+        width: fit-content;
+        position: absolute;
+        bottom: 100px;
+        left: 130px;
+        color: #FFFFFF; }
+      .register .grid-form .grid-left img {
+        width: 70%;
+        margin-top: 60px;
+        margin-left: 80px; }
     @media (min-width: 64.0626em) {
       .register .grid-form {
         grid-template-columns: 40% 60%; } }
